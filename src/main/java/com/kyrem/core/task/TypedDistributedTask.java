@@ -1,5 +1,7 @@
 package com.kyrem.core.task;
 
+import lombok.Builder;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -29,6 +31,7 @@ public class TypedDistributedTask<T> implements Runnable {
     private final int distributionSize;
     private int currentPosition = 0;
 
+    @Builder
     public TypedDistributedTask(Consumer<T> action, Predicate<T> escapeCondition, int distributionSize) {
         this.distributionSize = distributionSize;
         this.action = action;
