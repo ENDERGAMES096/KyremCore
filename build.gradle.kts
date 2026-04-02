@@ -1,6 +1,7 @@
 plugins {
     `java-library`
     `maven-publish`
+    id("io.freefair.lombok") version "8.6"
 }
 
 group = "com.github.KyremWorks"
@@ -15,12 +16,6 @@ repositories {
 }
 
 dependencies {
-    compileOnly("org.projectlombok:lombok:1.18.34")
-    annotationProcessor("org.projectlombok:lombok:1.18.34")
-
-    testCompileOnly("org.projectlombok:lombok:1.18.34")
-    testAnnotationProcessor("org.projectlombok:lombok:1.18.34")
-
     compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
     implementation("com.mysql:mysql-connector-j:9.3.0")
     implementation("com.zaxxer:HikariCP:5.1.0")
