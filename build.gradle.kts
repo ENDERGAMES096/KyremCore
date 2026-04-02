@@ -6,7 +6,6 @@ plugins {
 group = "com.github.KyremWorks"
 version = "1.0.1"
 
-
 repositories {
     mavenCentral()
     maven {
@@ -20,8 +19,11 @@ dependencies {
     implementation("com.mysql:mysql-connector-j:9.3.0")
     implementation("com.zaxxer:HikariCP:5.1.0")
 
-    compileOnly("org.projectlombok:lombok:1.18.32")
-    annotationProcessor("org.projectlombok:lombok:1.18.32")
+    compileOnly("org.projectlombok:lombok:1.18.34")
+    annotationProcessor("org.projectlombok:lombok:1.18.34")
+
+    testCompileOnly("org.projectlombok:lombok:1.18.34")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.34")
 }
 
 java {
